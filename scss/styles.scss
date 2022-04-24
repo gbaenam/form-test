@@ -1,0 +1,233 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+input,
+textarea {
+    font-family: 'Ubuntu', sans-serif;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// input[type=checkbox] {
+//     transform: scale(2);
+//     -ms-transform: scale(2);
+//     -webkit-transform: scale(2);
+//     padding: 10px;
+// }
+
+button {
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    background-color: transparent;
+}
+
+label,
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 8px 30px;
+    background-color: lightgrey;
+}
+
+.form {
+    display: flex;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+
+    &__fielset {
+        padding: 0;
+        border: none;
+    }
+
+    &__legent {
+        width: 100%;
+        font-size: 30px;
+        padding: 7px 0 7px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    &__box {
+        margin-bottom: 22px;
+    }
+
+    &__box:last-child {
+        display: flex;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    &__box:last-child label {
+        margin-bottom: 0;
+    }
+
+    &__label {
+        font-size: 15px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    &__error-message {
+        color: #cc0000;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    &__input {
+        font-size: 16px;
+    }
+
+    &__text-area {
+            resize: none;
+            min-height: 150px;
+    }
+
+    &__input,
+    &__text-area {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        transition: .2s ease all;
+        border: 2px solid transparent;
+
+        &:focus {
+            border-color: #0075ff;
+            box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+        }
+    }
+
+    &__input-terminos {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    &__button {
+        color: #fff;
+        font-size: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #0075ff;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: #3a1cff;
+        }
+
+        &:disabled {
+            color: lightgrey;
+            background-color: #eeeeee;
+        }
+    }
+}
+
+.modal {
+    // Estilos de la ventana modal
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+    visibility: hidden;
+    background-color: rgba(0,0,0,.8);
+
+    // Centrado de modal__content
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        width: 90%;
+        height: 250px;
+        border-radius: 20px;
+        background-color: #fff;
+
+        // Centrado del contenido
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        // Animación de modal__content
+        transition: transform 1s;
+        transform: translateY(-100vh);
+    }
+
+    &__confirmation {
+        margin-top: 0;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #00a135;
+    }
+
+    &__message {
+        margin-bottom: 3rem;
+    }
+
+    &__close {
+        color: white;
+        padding: 7px 60px;
+        background-color: #0a0a0a;
+    }
+
+}
+
+
+// Apertura ventana modal.
+.modal--open {
+    transform: translateY(0);
+}
+
+
+
+// Estilos para validación del formulario.
+
+.correcto .form__input {
+    border-color: #1ed12d;
+}
+
+.incorrecto .form__input {
+    border-color: #cc0000;
+}
+
+.correcto .form__text-area {
+    border-color: #1ed12d;
+}
+
+.incorrecto .form__text-area {
+    border-color: #cc0000;
+}
+

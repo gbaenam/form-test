@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- inputs -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- label -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form acction="https://formspree.io/f/mwkyqvdz" method="POST" autocomplete="on" class="form" id="form">
+            <fieldset class="form__fielset">
+                <legend class="form__legent">Cont&aacute;ctanos<a href=""></a></legend>
+
+                <!-- Nombre -->
+                <div class="form__box">
+                    <label for="name" class="form__label">Nombre completo</label>
+                    <p></p>
+                    <input type="text" name="name" autocapitalize="words" class="form__input input" id="name">
+                </div>
+
+                <!-- Correo electrónico. -->
+                <div class="form__box">
+                    <label for="email" class="form__label">Correo Electr&oacute;nico</label>
+                    <p></p>
+                    <input type="email" name="email" class="form__input input" id="email">
+                </div>
+
+                <!-- Correo electrónico confirmar. -->
+                <div class="form__box">
+                    <label for="checkmail" class="form__label">Confirmar Correo Electr&oacute;nico</label>
+                    <p></p>
+                    <input type="email" name="checkmail" class="form__input input" id="checkmail">
+                </div>
+
+                <!-- Mensaje. -->
+                <div class="form__box">
+                    <label for="textarea" class="form__label">D&eacute;janos tu mensaje</label>
+                    <p></p>
+                    <textarea name="textarea" class="form__text-area input" id="textarea"></textarea>
+                </div>
+
+                <!-- Términos y condiciones. -->
+                <div class="form__box">
+                    <input type="checkbox" name="checkbox" class="form__input-terminos" id="terminos">
+                    <label for="terminos" class="form__label">Acepto T&eacute;rminos y Condiciones</label>
+                </div>
+
+            </fieldset>
+            <!-- Botón enviar -->
+            <button type="submit" class="form__button" id="submit-button" disabled>Enviar</button>
+        </form>
+        <!-- Ventana modal -->
+        <div class="modal" id="modal">
+            <div class="modal__content" id="modal-content">
+                <h2 class="modal__confirmation">¡Env&iacute;o exitoso!</h2>
+                <p class="modal__message">Pronto te contestaremos</p>
+                <button class="modal__close" id="modal-close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
